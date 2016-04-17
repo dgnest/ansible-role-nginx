@@ -7,15 +7,15 @@ server {
     server_name {{ nginx.server_name }};
 
     location /favicon.ico {
-        alias /var/www/favicon.ico;
+        alias {{ nginx_favicon }};
     }
 
     location /static/ {
-        alias {{ app.dir.static }}/;
+        alias {{ nginx_path_static }}/;
     }
 
     location /media/ {
-        alias {{ app.dir.media }}/;
+        alias {{ nginx_path_media }}/;
     }
 
     location / {
