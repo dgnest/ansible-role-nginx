@@ -3,9 +3,9 @@ galaxy_info:
   author: Luis Mayta
   description: Ansible role to install nginx
   company: HadenLabs
-  version: 0.0.2
+  version: 0.0.3
   license: Mit
-  min_ansible_version: 1.2
+  min_ansible_version: 1.4
   platforms:
   - name: EL
     versions:
