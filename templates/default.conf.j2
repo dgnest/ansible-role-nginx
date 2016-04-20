@@ -29,9 +29,8 @@ server {
         # proxy_set_header X-Scheme $scheme;
         # proxy_pass {{ nginx.proxy_pass}};
         # proxy_next_upstream error;
-
     }
 
-    access_log /var/log/nginx/{{ nginx_project_name }}.access_log;
-    error_log /var/log/nginx/{{ nginx_project_name }}.error_log;
+    access_log {{ _nginx_file_path_log }}.access_log;
+    error_log {{ _nginx_file_path_log }}.error_log;
 }

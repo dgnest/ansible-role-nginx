@@ -4,5 +4,8 @@
 
 _nginx_path:
   tmp: "/var/tmp"
+  log: "/var/log/nginx"
   sites_available: "/etc/nginx/sites-available"
   sites_enabled: "/etc/nginx/sites-enabled"
+
+_nginx_file_path_log: "{{ _nginx_path.log }}/{{ nginx_project_name }}"
