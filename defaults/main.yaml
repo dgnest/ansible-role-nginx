@@ -3,7 +3,6 @@
 
 nginx_project_name: "application"
 
-nginx_name: "default"
 nginx_server_name: "127.0.0.1"
 nginx_port: "80"
 nginx_favicon: "/var/www/favicon.ico"
