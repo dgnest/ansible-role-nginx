@@ -9,3 +9,13 @@ _nginx_path:
   sites_enabled: "/etc/nginx/sites-enabled"
 
 _nginx_file_path_log: "{{ _nginx_path.log }}/{{ nginx_project_name }}"
+
+_nginx:
+  port: "{{ nginx_port }}"
+  server_name: "{{ nginx_server_name }}"
+  proxy_pass: "{{ nginx_proxy_pass }}"
+  templates:
+    - src: "default.conf.j2"
+      dest: "{{ _nginx_path.sites_enabled }}/{{ nginx_name }}"
+    - src: "default.conf.j2"
+      dest: "{{ _nginx_path.sites_available }}/{{ nginx_name }}"

@@ -10,13 +10,5 @@ nginx_favicon: "/var/www/favicon.ico"
 
 nginx_path_static: "/static"
 nginx_path_media: "/media"
-
-nginx:
-  port: "{{ nginx_port }}"
-  server_name: "{{ nginx_server_name }}"
-  proxy_pass: "{{ nginx_server_name }}:{{ nginx_port }}"
-  templates:
-    - src: "default.conf.j2"
-      dest: "{{ _nginx_path.sites_available }}/{{ nginx_name }}"
-    - src: "default.conf.j2"
-      dest: "{{ _nginx_path.sites_available }}/{{ nginx_name }}"
+nginx_proxy_pass: "{{ nginx_server_name }}:{{ nginx_port }}"
+nginx_uwsgi_enabled: True
