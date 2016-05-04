@@ -2,6 +2,8 @@
 
 # vars file for nginx
 
+_nginx_name: "default"
+
 _nginx_path:
   tmp: "/var/tmp"
   log: "/var/log/nginx"
@@ -16,6 +18,6 @@ _nginx:
   proxy_pass: "{{ nginx_proxy_pass }}"
   templates:
     - src: "default.conf.j2"
-      dest: "{{ _nginx_path.sites_enabled }}/{{ nginx_name }}"
+      dest: "{{ _nginx_path.sites_enabled }}/{{ _nginx_name }}"
     - src: "default.conf.j2"
-      dest: "{{ _nginx_path.sites_available }}/{{ nginx_name }}"
+      dest: "{{ _nginx_path.sites_available }}/{{ _nginx_name }}"
