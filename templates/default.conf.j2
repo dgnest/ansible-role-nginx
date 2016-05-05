@@ -1,10 +1,10 @@
 upstream {{ nginx_project_name }} {
-    server {{ nginx_server_name }}:{{ nginx_port }}; # for a web port socket (we'll use this first)
+    server {{ _nginx.server_name }}:{{ _nginx.port }}; # for a web port socket (we'll use this first)
 }
 
 server {
-    listen {{ nginx.port }};
-    server_name {{ nginx.server_name }};
+    listen {{ _nginx.port }};
+    server_name {{ _nginx.server_name }};
 
     location /favicon.ico {
         alias {{ nginx_favicon }};
@@ -19,7 +19,7 @@ server {
     }
 
     location / {
-      {% if nginx_uwsgi_enabled is True %}
+      {% if nginx_uwsgi_enabled is defined %}
         include         uwsgi_params;
         uwsgi_pass      {{ nginx_project_name }};
         #uwsgi_pass unix://var/run/uwsgi/flaskapp.sock;
@@ -28,7 +28,7 @@ server {
         # proxy_set_header Host $http_host;
         # proxy_set_header X-Real-IP $remote_addr;
         # proxy_set_header X-Scheme $scheme;
-        # proxy_pass {{ nginx.proxy_pass}};
+        # proxy_pass {{ _nginx.proxy_pass}};
         # proxy_next_upstream error;
     }
 
