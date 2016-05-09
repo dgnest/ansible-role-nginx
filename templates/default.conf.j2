@@ -1,5 +1,5 @@
 upstream {{ nginx_project_name }} {
-    server {{ _nginx.server_name }}:{{ _nginx.port }}; # for a web port socket (we'll use this first)
+    server {{ _nginx.proxy_pass }}; # for a web port socket (we'll use this first)
 }
 
 server {
