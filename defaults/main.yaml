@@ -9,5 +9,7 @@ nginx_favicon: "/var/www/favicon.ico"
 
 nginx_path_static: "/static"
 nginx_path_media: "/media"
-nginx_proxy_pass: "{{ nginx_server_name }}:{{ nginx_port }}"
+
+nginx_proxy_port: "9000"
+nginx_proxy_pass: "{{ nginx_server_name }}:{{ nginx_proxy_port }}"
 nginx_uwsgi_enabled: True
