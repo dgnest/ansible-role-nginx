@@ -1,9 +1,9 @@
 # Ansible Role Nginx
 
 <span class="badges" align="center">
-[![Build Status](https://travis-ci.org/hadenlabs/ansible-role-nginx.svg)](https://travis-ci.org/hadenlabs/ansible-role-nginx)
-[![Stories in Ready](https://badge.waffle.io/hadenlabs/ansible-role-nginx.svg?label=ready&title=Ready)](http://waffle.io/hadenlabs/ansible-role-nginx)
-[![GitHub issues](https://img.shields.io/github/issues/hadenlabs/ansible-role-nginx.svg)](https://github.com/hadenlabs/ansible-role-nginx/issues)
+[![Build Status](https://travis-ci.org/dgnest/ansible-role-nginx.svg)](https://travis-ci.org/dgnest/ansible-role-nginx)
+[![Stories in Ready](https://badge.waffle.io/dgnest/ansible-role-nginx.svg?label=ready&title=Ready)](http://waffle.io/dgnest/ansible-role-nginx)
+[![GitHub issues](https://img.shields.io/github/issues/dgnest/ansible-role-nginx.svg)](https://github.com/dgnest/ansible-role-nginx/issues)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
 </span>
 
@@ -44,7 +44,7 @@ To install a specific version:
 
     - hosts: servers
       roles:
-         - { role: hadenlabs.nginx }
+         - { role: dgnest.nginx }
 
 
 ## Changelog
@@ -57,7 +57,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [Luis Mayta][link-author]
+Made with :heart: ️:coffee:️ and :pizza: by [dgnest][link-company].
+
 - [All Contributors][link-contributors]
 
 [link-nginx]: https://nginx.org/
@@ -65,5 +66,5 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 <!-- Other -->
 
-[link-author]: https://github.com/luismayta
 [link-contributors]: AUTHORS
+[link-company]: https://github.com/dgnest
