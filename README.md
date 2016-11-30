@@ -2,7 +2,6 @@
 
 <span class="badges" align="center">
 [![Build Status](https://travis-ci.org/dgnest/ansible-role-nginx.svg)](https://travis-ci.org/dgnest/ansible-role-nginx)
-[![Stories in Ready](https://badge.waffle.io/dgnest/ansible-role-nginx.svg?label=ready&title=Ready)](http://waffle.io/dgnest/ansible-role-nginx)
 [![GitHub issues](https://img.shields.io/github/issues/dgnest/ansible-role-nginx.svg)](https://github.com/dgnest/ansible-role-nginx/issues)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
 </span>
