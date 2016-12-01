@@ -1,4 +1,4 @@
-# Ansible Role Nginx
+# Ansible Role: Nginx
 
 <span class="badges" align="center">
 [![Build Status](https://travis-ci.org/dgnest/ansible-role-nginx.svg)](https://travis-ci.org/dgnest/ansible-role-nginx)
