@@ -1,13 +1,26 @@
 ---
-- name: Installs nginx web server
-  sudo: yes
-  apt: pkg=nginx state=latest
-  notify:
-    - start nginx
+# task for Dgnest.nginx
 
-- name: setup nginx configuration
-  sudo: yes
-  template: src="{{ item.src }}" dest="{{ item.dest }}"
-  with_items: _nginx.templates
-  notify:
-    - restart nginx
+- include: include_vars.yml
+
+- include: load.yaml
+
+- include: apps.yaml
+
+- include: dependences.yaml
+
+- include: files.yaml
+
+- include: host.yaml
+
+- include: pip.yaml
+
+- include: configure.yaml
+
+- include: install.yaml
+
+- include: templates.yaml
+
+- include: environment.yaml
+
+- include: post_install.yaml
