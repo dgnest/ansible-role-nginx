@@ -2,6 +2,8 @@
 # defaults file for nginx
 
 nginx_project_name: "application"
+# gzip
+nginx_gzip: True
 
 nginx_server_name: "127.0.0.1"
 nginx_port: "80"
