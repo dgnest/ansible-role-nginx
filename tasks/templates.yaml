@@ -1,0 +1,9 @@
+---
+# task file for Dgnest.nginx
+
+- name: copy templates
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items: _nginx.templates
+  when: _nginx.templates is defined
