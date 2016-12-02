@@ -1,8 +1,14 @@
 ---
 # task for dgnest.nginx
 
-- include: install.d/CentOS.yaml
-  when: ansible_distribution == "CentOS"
+- include: install.d/RedHat.yaml
+  when: ansible_distribution == "RedHat"
+
+- include: install.d/Debian.yml
+  when: ansible_os_family == 'Debian'
 
 - include: install.d/Ubuntu.yaml
   when: ansible_distribution == "Ubuntu"
+
+- include: install.d/FreeBSD.yml
+  when: ansible_os_family == 'FreeBSD'
