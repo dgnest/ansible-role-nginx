@@ -1,6 +1,6 @@
 ---
 
-# task for Dgnest.nginx
+# task for dgnest.nginx
 
 
 - name: include os specific variables

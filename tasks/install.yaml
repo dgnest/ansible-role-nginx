@@ -1,5 +1,5 @@
 ---
-# task for Dgnest.nginx
+# task for dgnest.nginx
 
 - include: install.d/CentOS.yaml
   when: ansible_distribution == "CentOS"

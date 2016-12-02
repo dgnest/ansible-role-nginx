@@ -1,5 +1,5 @@
 ---
-# task file for Dgnest.nginx
+# task file for dgnest.nginx
 
 - name: Update package repositories
   sudo: yes
