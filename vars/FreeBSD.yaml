@@ -1,0 +1,9 @@
+---
+_root_group: wheel
+_nginx_conf_path: /usr/local/etc/nginx/conf.d
+_nginx_conf_file_path: /usr/local/etc/nginx/nginx.conf
+_nginx_mime_file_path: /usr/local/etc/nginx/mime.types
+_nginx_pidfile: /var/run/nginx.pid
+_nginx_vhost_path: /usr/local/etc/nginx/sites-enabled
+_nginx_default_vhost_path: /usr/local/etc/nginx/sites-enabled/default
+__nginx_user: "www"

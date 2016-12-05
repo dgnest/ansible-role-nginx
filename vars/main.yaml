@@ -4,13 +4,11 @@
 
 _nginx_name: "default"
 
-_nginx_path:
-  tmp: "/var/tmp"
-  log: "/var/log/nginx"
-  sites_available: "/etc/nginx/sites-available"
-  sites_enabled: "/etc/nginx/sites-enabled"
-
-_nginx_file_path_log: "{{ _nginx_path.log }}/{{ nginx_project_name }}"
+_nginx_templates:
+  - src: "default.conf.j2"
+    dest: "{{ _nginx_path.sites_enabled }}/{{ _nginx_name }}"
+  - src: "default.conf.j2"
+    dest: "{{ _nginx_path.sites_available }}/{{ _nginx_name }}"
 
 _nginx:
   port: "{{ nginx_port }}"

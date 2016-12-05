@@ -1,0 +1,26 @@
+---
+
+# task file for dgnest.nginx
+
+- name: Ensure apt cache is up to date
+  apt:
+    update_cache: yes
+
+- name: Install ntp dependencies
+  apt: name={{ item }} state=present update_cache=yes
+  with_items: _nginx_packages
+  when: _nginx_packages is defined
+
+- name: Add PPA for Nginx.
+  apt_repository:
+    repo: 'ppa:nginx/{{ _nginx_ppa_version }}'
+    state: present
+    update_cache: yes
+  register: nginx_ppa_added
+  when: _nginx_ppa_use
+
+- name: Ensure nginx will reinstall if the PPA was just added.
+  apt:
+    name: nginx
+    state: absent
+  when: nginx_ppa_added.changed
