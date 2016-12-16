@@ -8,7 +8,7 @@
 
 - name: Install ntp dependencies
   apt: name={{ item }} state=present update_cache=true
-  with_items: _nginx_packages
+  with_items: "{{_nginx_packages | default([])}}"
   when: _nginx_packages is defined
 
 - name: Add PPA for Nginx.
@@ -18,9 +18,5 @@
     update_cache: true
   register: nginx_ppa_added
   when: _nginx_ppa_use
-
-- name: Ensure nginx will reinstall if the PPA was just added.
-  apt:
-    name: nginx
-    state: absent
-  when: nginx_ppa_added.changed
+  notify:
+    - install nginx
