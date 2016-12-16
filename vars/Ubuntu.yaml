@@ -1,4 +1,5 @@
 ---
+# vars file for dgnest.nginx (Ubuntu specific)
 
 _root_group: root
 _nginx_conf_path: /etc/nginx/conf.d

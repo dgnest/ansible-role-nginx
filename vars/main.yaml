@@ -2,20 +2,11 @@
 
 # vars file for nginx
 
-_nginx_name: "default"
-
-_nginx_templates:
-  - src: "default.conf.j2"
-    dest: "{{ _nginx_path.sites_enabled }}/{{ _nginx_name }}"
-  - src: "default.conf.j2"
-    dest: "{{ _nginx_path.sites_available }}/{{ _nginx_name }}"
-
-_nginx:
-  port: "{{ nginx_port }}"
-  server_name: "{{ nginx_server_name }}"
-  proxy_pass: "{{ nginx_proxy_pass }}"
-  templates:
-    - src: "default.conf.j2"
-      dest: "{{ _nginx_path.sites_enabled }}/{{ _nginx_name }}"
-    - src: "default.conf.j2"
-      dest: "{{ _nginx_path.sites_available }}/{{ _nginx_name }}"
+_root_group: root
+_nginx_conf_path: /etc/nginx/conf.d
+_nginx_conf_file_path: /etc/nginx/nginx.conf
+_nginx_mime_file_path: /etc/nginx/mime.types
+_nginx_pidfile: /run/nginx.pid
+_nginx_vhost_path: /etc/nginx/sites-enabled
+_nginx_default_vhost_path: /etc/nginx/sites-enabled/default
+__nginx_user: "www-data"
