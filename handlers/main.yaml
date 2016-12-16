@@ -8,3 +8,8 @@
 
 - name: reload nginx
   service: name=nginx state=reloaded
+
+- name: install nginx
+  package:
+    name: nginx
+    state: absent
