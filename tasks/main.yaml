@@ -3,8 +3,6 @@
 
 - include: include_vars.yml
 
-- include: load.yaml
-
 - include: apps.yaml
 
 - include: dependences.yaml

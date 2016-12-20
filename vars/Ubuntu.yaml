@@ -1,6 +1,9 @@
 ---
+# vars file for dgnest.nginx (Ubuntu specific)
 
-# vars file for nginx
+# _ntp_pip_packges:
+#   name: pip
+#   version:
 
 _root_group: root
 _nginx_conf_path: /etc/nginx/conf.d
