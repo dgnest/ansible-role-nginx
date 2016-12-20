@@ -5,7 +5,7 @@
   template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
-  with_items: _nginx.templates
+  with_items: "{{ _nginx.templates | default({}) }}"
   when: _nginx.templates is defined
 
 
