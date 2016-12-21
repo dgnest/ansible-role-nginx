@@ -6,7 +6,7 @@
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
   with_items: "{{ _nginx.templates | default({}) }}"
-  when: _nginx.templates is defined
+  when: _nginx is defined
 
 
 - name: enabled gzip
