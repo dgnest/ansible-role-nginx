@@ -1,3 +1,9 @@
+{% for item in nginx_vhost_upstreams %}
+upstream {{ item.name }} {
+    server {{ item.proxy_pass }}; # for a web port socket (we'll use this first)
+}
+{% endfor %}
+
 {% for vhost in nginx_vhosts %}
 server {
     listen {{ vhost.listen | default('80 default_server') }};
