@@ -54,6 +54,9 @@ nginx_vhosts: []
 #   access_log: ""
 #   error_log: ""
 #   extra_parameters: "" # Can be used to add extra config blocks (multiline).
+nginx_vhost_upstreams: []
+# - name: django
+#   proxy_pass: 127.0.0.1:9000
 
 nginx_upstreams: []
 # - name: myapp1
