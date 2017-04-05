@@ -5,7 +5,6 @@
   when: ansible_distribution == "RedHat"
 
 - include: install.d/Debian.yaml
-  when: ansible_os_family == 'Debian'
-
-- include: install.d/Ubuntu.yaml
-  when: ansible_distribution == "Ubuntu"
+  when:
+    - ansible_os_family == 'Debian'
+    - ansible_distribution == "Ubuntu"
