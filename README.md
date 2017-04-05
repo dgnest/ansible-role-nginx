@@ -1,10 +1,8 @@
 # Ansible Role: Nginx
 
-<span class="badges" align="center">
 [![Build Status](https://travis-ci.org/dgnest/ansible-role-nginx.svg)](https://travis-ci.org/dgnest/ansible-role-nginx)
 [![GitHub issues](https://img.shields.io/github/issues/dgnest/ansible-role-nginx.svg)](https://github.com/dgnest/ansible-role-nginx/issues)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
-</span>
 
 
 Installs and configures [nginx][link-nginx] on a host.
@@ -70,8 +68,6 @@ Made with :heart: ️:coffee:️ and :pizza: by [dgnest][link-company].
 
 [link-nginx]: https://nginx.org/
 [link-brew]: http://brew.sh/
-
-<!-- Other -->
 
 [link-contributors]: AUTHORS
 [link-company]: https://github.com/dgnest

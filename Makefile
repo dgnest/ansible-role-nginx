@@ -13,7 +13,6 @@ WGET = wget
 ANSIBLE_PROVISION = $(shell) $(SCRIPT_DIR)/provision.sh
 ANSIBLE_DEPLOY = $(shell) $(SCRIPT_DIR)/deploy.sh
 CLEAN = $(shell) $(SCRIPT_DIR)/clean.sh
-GVM = $(shell) $(SCRIPT_DIR)/gvm.sh
 GRIP = $(shell) $(SCRIPT_DIR)/grip.sh
 PYENV = $(shell) $(SCRIPT_DIR)/pyenv.sh
 SETUP = $(shell) $(SCRIPT_DIR)/setup.sh
@@ -49,7 +48,6 @@ distclean: clean
 
 environment:
 	$(PYENV)
-	$(GVM)
 	$(INSTALL)
 
 
@@ -71,16 +69,16 @@ maintainer-clean: distclean
 
 
 lintcode:
-		$(LINTCODE)
+	$(LINTCODE)
 
 
 sync:
-		$(SYNC)
+	$(SYNC)
 
 
 watch:
-		$(WATCH)
+	$(WATCH)
 
 
 test:
-		$(TEST)
+	$(TEST)
