@@ -11,3 +11,6 @@ _nginx_vhost_path: /etc/nginx/sites-enabled
 _nginx_default_vhost_path: /etc/nginx/sites-enabled/default
 __nginx_user: "www-data"
 _nginx_package_name: "nginx"
+_nginx_packages:
+  - software-properties-common
+  - python-software-properties
