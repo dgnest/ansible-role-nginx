@@ -11,10 +11,6 @@
   when:
     - _nginx_ppa_version is defined
 
-- name: Update apt cache.
-  apt: update_cache=true cache_valid_time=86400
-  changed_when: false
-
 - name: Ensure nginx is installed.
   package:
     name: "{{ _nginx_package_name }}"
