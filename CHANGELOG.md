@@ -2,8 +2,13 @@
 All notable changes to this project will be documented in this file.
 This file uses change log convention from [Keep a CHANGELOG](http://keepachangelog.com).
 
+## [Unreleased]
 
-[unreleased]: https://github.com/dgnest/ansible-role-nginx/compare/0.1.5...HEAD
+## [0.1.7] - 2017-05-03
+
+[Unreleased]: https://github.com/dgnest/ansible-role-nginx/compare/0.1.7...HEAD
+[0.1.7]: https://github.com/dgnest/ansible-role-nginx/compare/0.1.6...0.1.7
+[0.1.6]: https://github.com/dgnest/ansible-role-nginx/compare/0.1.5...0.1.6
 [0.1.5]: https://github.com/dgnest/ansible-role-nginx/compare/0.1.4...0.1.5
 [0.1.4]: https://github.com/dgnest/ansible-role-nginx/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/dgnest/ansible-role-nginx/compare/0.1.2...0.1.3
@@ -22,5 +27,5 @@ This file uses change log convention from [Keep a CHANGELOG](http://keepachangel
 
 [CHANGELOG.md]: CHANGELOG.md
 [CONTRIBUTING.md]: CONTRIBUTING.md
-[LICENCE.md]: LICENCE.md
+[LICENCE]: LICENCE
 [README.md]: README.md
