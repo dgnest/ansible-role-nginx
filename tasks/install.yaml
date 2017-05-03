@@ -2,9 +2,9 @@
 # task for dgnest.nginx
 
 - include: install.d/RedHat.yaml
-  when: ansible_distribution == "RedHat"
+  when:
+    - ansible_os_family == "RedHat"
 
 - include: install.d/Debian.yaml
   when:
     - ansible_os_family == 'Debian'
-    - ansible_distribution == "Ubuntu"
