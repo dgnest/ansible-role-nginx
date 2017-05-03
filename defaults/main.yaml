@@ -71,13 +71,3 @@ nginx_upstreams: []
 #     "srv2.example.com weight=3",
 #     "srv3.example.com"
 #   }
-
-
-# vars default protected
-
-# The name of the nginx apt/yum package to install.
-_nginx_package_name: "nginx"
-
-# Use the official Nginx PPA for Ubuntu, and the version to use if so.
-_nginx_ppa_use: true
-_nginx_ppa_version: stable
